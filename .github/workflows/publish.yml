@@ -1,4 +1,4 @@
-name: Publish to github pages
+name: Publish to github pages and npmjs.org
 
 on:
   push:

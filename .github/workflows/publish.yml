@@ -33,10 +33,10 @@ jobs:
         run: "npm run build"
 
       - name: Publish package
-        package: "package/package.json"
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
+          package: "package/package.json"
       
       - name: Build site
         run: "npm run build:site"

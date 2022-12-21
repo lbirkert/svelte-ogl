@@ -28,8 +28,17 @@ jobs:
 
       - name: Install JS dependencies
         run: npm install
+      
+      - name: Build package
+        run: "npm run build"
 
-      - name: Build
+      - name: Publish package
+        package: "package/package.json"
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+      
+      - name: Build site
         run: "npm run build:site"
 
       - name: Upload GitHub Pages artifact

@@ -10,7 +10,7 @@ npm i -D svelte-ogl
 
 ```html
 <script lang="ts">
-    import { Canvas, Camera, Mesh, Scene } from "svelte-ogl";
+	import { Canvas, Camera, Mesh, Scene } from "svelte-ogl";
 	import { Program, Plane } from "ogl";
 
 	const uniforms = {

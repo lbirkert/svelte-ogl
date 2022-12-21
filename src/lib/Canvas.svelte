@@ -17,7 +17,12 @@
 
 	export let scene: unknown = "default";
 
-	const dispatch = createEventDispatcher();
+    type RenderEvent = {
+        frame: number, time: number,
+        renderer: Renderer, size: Size
+    };
+
+    const dispatch = createEventDispatcher<{"render": RenderEvent}>();
 
 	const { parentSize, parentSizeAction } = useParentSize();
 
@@ -62,7 +67,7 @@
 
 	let frame = 0;
 	function render() {
-		dispatch("render", { frame, time: performance.now() });
+		dispatch("render", { frame, time: performance.now(), size: $userSize, renderer: $renderer });
 
 		if (scenes.has(scene)) {
 			$renderer.render({ scene: scenes.get(scene) });

@@ -30,7 +30,7 @@ npm i -D svelte-ogl
                 		attribute vec2 uv;
                 		attribute vec2 position;
                 		varying vec2 vUv;
-                
+
                 		void main() {
                				vUv = uv;
                				gl_Position = vec4(position, 0, 1);
@@ -39,7 +39,7 @@ npm i -D svelte-ogl
                 		fragment: /* glsl */ `
                 		precision highp float;
                 		uniform float time;
-                        
+
                 		void main() {
                     			gl_FragColor = vec4(vUv * sin(time), 1, 1);
                 		}

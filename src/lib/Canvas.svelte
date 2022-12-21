@@ -17,12 +17,14 @@
 
 	export let scene: unknown = "default";
 
-    type RenderEvent = {
-        frame: number, time: number,
-        renderer: Renderer, size: Size
-    };
+	type RenderEvent = {
+		frame: number;
+		time: number;
+		renderer: Renderer;
+		size: Size;
+	};
 
-    const dispatch = createEventDispatcher<{"render": RenderEvent}>();
+	const dispatch = createEventDispatcher<{ render: RenderEvent }>();
 
 	const { parentSize, parentSizeAction } = useParentSize();
 

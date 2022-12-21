@@ -5,7 +5,7 @@
 	const uniforms = {
 		time: { value: 0 },
 		frame: { value: 0 }
-    };
+	};
 </script>
 
 <main>
@@ -20,10 +20,10 @@
 
 	<div id="canvas">
 		<Canvas
-            on:render={(e) => {
+			on:render={(e) => {
 				uniforms.time.value = e.detail.time / 1000;
-                uniforms.frame.value = e.detail.frame;
-                console.log(e.detail.size);
+				uniforms.frame.value = e.detail.frame;
+				console.log(e.detail.size);
 			}}
 		>
 			<Camera />

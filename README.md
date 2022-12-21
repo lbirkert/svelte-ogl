@@ -27,24 +27,24 @@ npm i -D svelte-ogl
 		<Mesh
 			program={(gl) => new Program(gl, {
 				vertex: /* glsl */ `
-                attribute vec2 uv;
-                attribute vec2 position;
-                varying vec2 vUv;
+                		attribute vec2 uv;
+                		attribute vec2 position;
+                		varying vec2 vUv;
                 
-                void main() {
-                    vUv = uv;
-                    gl_Position = vec4(position, 0, 1);
-                }
-                `,
-                fragment: /* glsl */ `
-                precision highp float;
-                uniform float time;
+                		void main() {
+               				vUv = uv;
+               				gl_Position = vec4(position, 0, 1);
+                		}
+                		`,
+                		fragment: /* glsl */ `
+                		precision highp float;
+                		uniform float time;
                         
-                void main() {
-                    gl_FragColor = vec4(vUv * sin(time), 1, 1);
-                }
-                `,
-			    uniforms
+                		void main() {
+                    			gl_FragColor = vec4(vUv * sin(time), 1, 1);
+                		}
+                		`,
+				uniforms
 			})}
 			geometry={(gl) =>
 				new Plane(gl, {

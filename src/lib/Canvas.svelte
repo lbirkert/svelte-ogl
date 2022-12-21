@@ -42,7 +42,6 @@
 
 	const scenes = new Map<unknown, Transform>();
 	function addScene(id: unknown, sceneobj: Transform) {
-		console.log(`Added scene with id '${id}'`);
 		scenes.set(id, sceneobj);
 	}
 

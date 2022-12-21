@@ -23,7 +23,6 @@
 			on:render={(e) => {
 				uniforms.time.value = e.detail.time / 1000;
 				uniforms.frame.value = e.detail.frame;
-				console.log(e.detail.size);
 			}}
 		>
 			<Camera />

@@ -18,7 +18,7 @@
 		"@sveltejs/kit": "next",
 		"@sveltejs/package": "next",
 		"@types/ogl": "npm:ogl-types@0.0.102",
-		"@typescript-eslint/eslint-plugin": "^5.47.0",
+		"@typescript-eslint/eslint-plugin": "^6.2.0",
 		"@typescript-eslint/parser": "^5.47.0",
 		"eslint": "^8.30.0",
 		"eslint-config-prettier": "^8.5.0",
